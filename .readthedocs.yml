@@ -8,6 +8,5 @@ sphinx:
   configuration: docs/conf.py  # Ruta al archivo conf.py
 
 python:
-  version: 3.8  # Versión de Python compatible con las dependencias
   install:
     - requirements: requirements.txt
