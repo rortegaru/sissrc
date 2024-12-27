@@ -1,16 +1,9 @@
 version: 2
 
-# Build tools and environments
-build:
-  os: ubuntu-22.04
-  tools:
-    python: "3.9"
-
-# Python dependencies
-python:
-  install:
-    - requirements: requirements.txt
-
-# Sphinx documentation build
 sphinx:
-  configuration: docs/source/conf.py
+  configuration: docs/conf.py  # Ajusta la ruta al archivo conf.py en tu proyecto
+
+python:
+  version: 3.9  # Ajusta a la versión de Python requerida por tu proyecto
+  install:
+    - requirements: requirements.txt  # Asegúrate de tener este archivo con tus dependencias
