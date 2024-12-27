@@ -5,7 +5,7 @@ build:
     python: "3.8"  # Especifica la versión de Python
 
 sphinx:
-  configuration: docs/conf.py  # Ruta al archivo conf.py
+  configuration: docs/source/conf.py  # Ruta al archivo conf.py
 
 python:
   install:
