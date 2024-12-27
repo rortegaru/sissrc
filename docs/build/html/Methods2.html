@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Theoretical and Physical Insights &mdash; sissrc  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Mathematical Foundation" href="chapter1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> sissrc
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="chapter1.html">Mathematical Foundation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Theoretical and Physical Insights</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#background"><strong>Background</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#methods"><strong>Methods</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vector-projection-and-matrix-rotation">Vector projection and matrix rotation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vector-projection">Vector projection</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#examples-discussion-and-results">Examples, discussion and results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#declaration-of-competing-interests">Declaration of Competing Interests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#references">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sissrc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Theoretical and Physical Insights</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Methods2.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="theoretical-and-physical-insights">
+<h1>Theoretical and Physical Insights<a class="headerlink" href="#theoretical-and-physical-insights" title="Permalink to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<p>“I rarely look up, while you don’t even know how to look down. (Yo pa’
+arriba volteo muy poco, tu pa’ abajo no sabes mirar)” It might sound
+like a conversation between seismologists and space scientists. In
+reality, it’s a lyric from a Mexican mariachi song that we should play
+at geophysics conferences.</p>
+<p>Seismology, the study of seismic waves generated by earthquakes and
+other phenomena, has traditionally focused on understanding the Earth’s
+internal processes. However, its techniques and tools have broader
+applications, particularly in studying supersonic events such as
+meteorites entering the atmosphere. This paper explores the use of
+seismic networks to analyze and measure these high-velocity phenomena
+using global seismic data and established methodologies.</p>
+<p>Meteorites and other supersonic objects produce characteristic seismic
+signals that can be analyzed using arrival times at multiple stations
+(e.g
+<span id="id1">[<a class="reference internal" href="#id58" title="O. I. Berngardt, N. P. Perevalova, A. A. Dobrynina, K. A. Kutelev, N. V. Shestakov, V. F. Bakhtiarov, O. A. Kusonsky, R. V. Zagretdinov, and G. A. Zherebtsov. Toward the azimuthal characteristics of ionospheric and seismic effects of “chelyabinsk” meteorite fall according to the data from coherent radar, gps, and seismic networks. Journal of Geophysical Research: Space Physics, 2015. URL: http://dx.doi.org/10.1002/2015ja021549, doi:10.1002/2015ja021549.">BPD+15</a>, <a class="reference internal" href="#id57" title="W. N. Edwards and A. R. Hildebrand. Supracenter: locating fireball terminal bursts in the atmosphere using seismic arrivals. Meteoritics &amp;amp; Planetary Science, 39(9):1449–1460, 2004. URL: http://dx.doi.org/10.1111/j.1945-5100.2004.tb00121.x, doi:10.1111/j.1945-5100.2004.tb00121.x.">EH04</a>, <a class="reference internal" href="#id55" title="Michael A. H. Hedlin and Kristoffer T. Walker. A study of infrasonic anisotropy and multipathing in the atmosphere using seismic networks. Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences, 371(1984):20110542, 2013. URL: http://dx.doi.org/10.1098/rsta.2011.0542, doi:10.1098/rsta.2011.0542.">HW13</a>, <a class="reference internal" href="#id51" title="A. Qamar. Space shuttle and meteroid–tracking supersonic objects in the atmosphere with seismographs. Seismological Research Letters, 66(5):6–12, 1995. URL: http://dx.doi.org/10.1785/gssrl.66.5.6, doi:10.1785/gssrl.66.5.6.">Qam95</a>, <a class="reference internal" href="#id50" title="J. Stevanović, N. A. Teanby, J. Wookey, N. Selby, I. J. Daubar, J. Vaubaillon, and R. Garcia. Bolide airbursts as a seismic source for the 2018 mars insight mission. Space Science Reviews, 211(1–4):525–545, 2017. URL: http://dx.doi.org/10.1007/s11214-016-0327-3, doi:10.1007/s11214-016-0327-3.">STW+17</a>]</span>), similar to earthquake localization
+techniques <span id="id2">[]</span>. It is possible to estimate
+the trajectory and theoretical impact points of such objects using
+seismic data. Despite the conceptual exploration of this approach over
+the years, it remains underutilized in practice, offering an exciting
+avenue for educational and scientific exploration
+<span id="id3">[<a class="reference internal" href="#id48" title="Elizabeth A. Silber. Perspectives and challenges in bolide infrasound processing and interpretation: a focused review with case studies. Remote Sensing, 16(19):3628, 2024. URL: http://dx.doi.org/10.3390/rs16193628, doi:10.3390/rs16193628.">Sil24</a>]</span>.</p>
+<p>The proliferation of seismic networks worldwide
+<span id="id4">[<a class="reference internal" href="#id42" title="A. T. Ringler, R. E. Anthony, R. C. Aster, C. J. Ammon, S. Arrowsmith, H. Benz, C. Ebeling, A. Frassetto, W.-Y. Kim, P. Koelemeijer, H. C. P. Lau, V. Lekić, J. P. Montagner, P. G. Richards, D. P. Schaff, M. Vallée, and W. Yeck. Achievements and prospects of global broadband seismographic networks after 30 years of continuous geophysical observations. Reviews of Geophysics, 60(3):e2021RG000749, 2022. e2021RG000749 2021RG000749. URL: https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021RG000749, arXiv:https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2021RG000749, doi:https://doi.org/10.1029/2021RG000749.">RAA+22</a>]</span> provides an unprecedented opportunity
+to engage students in this interdisciplinary field. These networks offer
+accessible, real-time data that can be used to connect theoretical
+concepts with practical applications. By introducing supersonic
+trajectory analysis as an extension of traditional seismology, we can
+inspire undergraduate and postgraduate students to explore novel uses of
+seismic networks, broadening their understanding of geophysics and its
+applications beyond the Earth’s surface
+<span id="id5">[<a class="reference internal" href="#id38" title="T. Karafyllidis, M. Papaevripidou, K. Vakkou, Z. Zacharia, S. Sotiriou, A. Moshou, L. Cerri, G. Chouliaras, D. Tataru, and B. Cavas. Unveiling the potential of educational seismology on students\\\textquotesingle attitudes toward stem disciplines. In EDULEARN24 Proceedings, 16th International Conference on Education and New Learning Technologies, 6793-6799. IATED, 1-3 July, 2024 2024. URL: https://doi.org/10.21125/edulearn.2024.1614, doi:10.21125/edulearn.2024.1614.">KPV+24</a>]</span>.</p>
+<p>In this paper, we present a didactic framework for introducing students
+to the study of supersonic events using seismic data. The methodology
+parallels earthquake location techniques, focusing on arrival times, and
+velocity analysis.</p>
+<p>One of the key characteristics of studying this type of phenomenon is
+the dynamic nature of the source, which contrasts with earthquakes that
+have a single point of origin. In this case, the source is different at
+each time because the bolide is in motion. This movement, when projected
+at the surface, results in parabolic arrival time curves, rather than
+the circular patterns typical of an earthquake or an explosion, often
+referred to as a “burst”
+(<span id="id6">[<a class="reference internal" href="#id49" title="Luca D’Auria, Enrica Marotta, Marcello Martini, and Patrizia Ricciolino. Seismic and acoustic detection of a bolide airburst in the gulf of naples (southern italy). Journal of Geophysical Research: Solid Earth, 2006. URL: http://dx.doi.org/10.1029/2005jb004254, doi:10.1029/2005jb004254.">DAuriaMMR06</a>, <a class="reference internal" href="#id57" title="W. N. Edwards and A. R. Hildebrand. Supracenter: locating fireball terminal bursts in the atmosphere using seismic arrivals. Meteoritics &amp;amp; Planetary Science, 39(9):1449–1460, 2004. URL: http://dx.doi.org/10.1111/j.1945-5100.2004.tb00121.x, doi:10.1111/j.1945-5100.2004.tb00121.x.">EH04</a>, <a class="reference internal" href="#id50" title="J. Stevanović, N. A. Teanby, J. Wookey, N. Selby, I. J. Daubar, J. Vaubaillon, and R. Garcia. Bolide airbursts as a seismic source for the 2018 mars insight mission. Space Science Reviews, 211(1–4):525–545, 2017. URL: http://dx.doi.org/10.1007/s11214-016-0327-3, doi:10.1007/s11214-016-0327-3.">STW+17</a>]</span>). We
+focus solely on the trajectory of the bolide in motion, as the reentry
+capsule did not explode or generated any burst-like event.</p>
+<p>We provide Jupyter notebooks <span id="id7">[<a class="reference internal" href="#id40" title="Bernadette M. Randles, Irene V. Pasquetto, Milena S. Golshan, and Christine L. Borgman. Using the jupyter notebook as a tool for open science: an empirical study. In 2017 ACM/IEEE Joint Conference on Digital Libraries (JCDL), volume, 1-2. 2017. doi:10.1109/JCDL.2017.7991618.">RPGB17</a>]</span> hosted in a
+public repository, offering hands-on tools for data analysis and
+visualization. These resources are designed to guide students through
+the application of seismological techniques to meteorite tracking,
+fostering both scientific curiosity and practical skills.</p>
+<p>It is important to say that seismic stations are not the only intruments
+that study moteorites and entry capsules, the vast majority are
+infrasound sensors
+(<span id="id8">[]</span>,
+even visual and cameras are good tools
+(<span id="id9">[]</span>). By bridging
+seismology and supersonic phenomena, this study aims to demonstrate the
+versatility of seismic networks and inspire the next generation of
+researchers to think creatively about the applications of geophysical
+science.</p>
+<p>In the following subsections, we will present two ways of solving a
+theoretical example of travel time calculation: vector projections
+<span id="id10">[]</span> and rotation matrices
+<span id="id11">[<a class="reference internal" href="#id41" title="K Nagasawa. An analysis of sonic boom from a great fireball on may 10, 1977, recorded on seismographs of volcano observations. Bull. Earthq. Res. Inst. Univ. Tokyo, 53:271–280, 1978.">Nag78</a>]</span>. Both approaches reach the same
+equations. This exercise forms the foundation for a wide range of
+analytical possibilities, enabling students to solve a large number of
+exercises and apply the method in various ways. This exercise allows any
+motivated student of these topics to tackle problems that might
+otherwise seem abstract and unapproachable, offering a direct
+application of vector algebra and rotation tensors in a meaningful
+context. We will demonstrate this exercise as an introduction to our
+courses on the location of bolides and reentry capsules.</p>
+</section>
+<section id="background">
+<h2><strong>Background</strong><a class="headerlink" href="#background" title="Permalink to this heading"></a></h2>
+<p>One of the first articles on this topic was written by K. Nagasawa
+(<a href="#id12"><span class="problematic" id="id13">:raw-latex:`\citeyear{nagasawa_1978}`</span></a>). Although the article is written
+in Japanese (Figure <a class="reference external" href="#fig:nagasawa">1</a>), it serves as a true gateway
+to analyzing supersonic bolides through seismic networks. It is
+interesting to see analog seismograms with the equations that stand out
+in this work. Interestingly, despite the challenges to understand
+without any knowledge of Japanese, this article has opened the door to a
+comprehensive understanding of isochrones and the calculation of travel
+times. We even recommend replicating the formulas breaking the barriers
+of language. <a href="#id14"><span class="problematic" id="id15">:raw-latex:`\cite{Ishihara_2004}`</span></a> presented an equation
+that describes the time from an origin to a seismic station, but it was
+based on <a href="#id16"><span class="problematic" id="id17">:raw-latex:`\cite{nagasawa_1978}`</span></a> without proof.</p>
+<figure class="align-default" id="id63">
+<a class="reference internal image-reference" href="Original79.jpegname:fig:nagasawa"><img alt="Original79.jpegname:fig:nagasawa" src="Original79.jpegname:fig:nagasawa" style="width: 60.0%;" /></a>
+<figcaption>
+<p><span class="caption-text">Nagasawa’s 1978 figure 5 that represented the travel time</span><a class="headerlink" href="#id63" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Later, <a href="#id18"><span class="problematic" id="id19">:raw-latex:`\cite{Pujol_2005}`</span></a> derived travel time equations
+using a straightforward approach based on the time from the origin of
+the shock wave to the station, dividing each component.
+<a href="#id20"><span class="problematic" id="id21">:raw-latex:`\cite{Pujol_2005}`</span></a> rather than relying on rotations and
+distances for a geometric description, he preferred to show a simple
+path of the shock wave. We found both methods to be equally manageable
+(or challenging) for use in teaching materials. There are also other
+expressions for the travel time that we will not explore, for example,
+those that follow a space shuttle that never lands
+<span id="id22">[<a class="reference internal" href="#id39" title="H. Kanamori, J. Mori, B. Sturtevant, D. L. Anderson, and T. Heaton. Seismic excitation by space shuttles. Shock Waves, 2(2):89–96, June 1992.">KMS+92</a>]</span> or the travel time that resemble a
+nuclear explosion because only treats the bolide burst without analyzing
+trajectory. Also, there are some authors who use only graphical
+solutions without using travel-time equations
+(<span id="id23">[<a class="reference internal" href="#id61" title="Pavel Kalenda, Jiří Borovička, and Pavel Spurný. The localization of fireball trajectories with the help of seismic networks. Studia Geophysica et Geodaetica, 58(1):84–99, 2013. URL: http://dx.doi.org/10.1007/s11200-012-0733-2, doi:10.1007/s11200-012-0733-2.">KBS13</a>]</span>). In addition, there
+are some networks that uses video
+cameras(<span id="id24">[<a class="reference internal" href="#id46" title="Yoshiaki Ishihara, Muneyoshi Furumoto, Shin’ichi Sakai, and Shin’ya Tsukada. The 2003 kanto large bolide’s trajectory determined from shockwaves recorded by a seismic network and images taken by a video camera. Geophysical Research Letters, 2004. URL: http://dx.doi.org/10.1029/2004gl020287, doi:10.1029/2004gl020287.">IFST04</a>]</span>),
+It is worth noting that some authors have discussed the benefits of
+using graphical solutions as better methods for seismic location instead
+of travel time
+methods.:cite:<cite>https://doi.org/10.1029/2002GL014722</cite>.</p>
+<figure class="align-default" id="id64">
+<a class="reference internal image-reference" href="PUJOLGENERAL2.pdfname:fig:cono_osiris"><img alt="PUJOLGENERAL2.pdfname:fig:cono_osiris" src="PUJOLGENERAL2.pdfname:fig:cono_osiris" style="width: 40.0%;" /></a>
+<figcaption>
+<p><span class="caption-text">a) schematizes the generation of the mach cone from the reentry of
+the SRC of the OSIRIS-REx mission and b) describes its geometry.</span><a class="headerlink" href="#id64" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>We took into account many considerations. For example, our approach is
+only valid for the projection where the Mach cone intersects the Earth’s
+surface, and we do not include the region where it extends beyond the
+trajectory. Additionally, we have not considered the explosive
+component, nor have we calculated changes in the projectile’s velocity,
+which will almost certainly occur when it enters the shallower regions
+of the atmosphere.</p>
+<p>We have used constant values for both the projectile’s velocity and the
+speed of sound. This approximation is probably not valid for
+measurements that require detailed knowledge of such variations.
+Furthermore, we have not extended our work to geophysical studies, where
+seismic sensors could be used to better understand the effects occurring
+during ground interaction, such as coupling waves. Our focus has been
+solely on the first arrivals, which is similar to the approach in
+seismology where analysis is limited to the first arrivals of P-waves.</p>
+</section>
+<section id="methods">
+<h2><strong>Methods</strong><a class="headerlink" href="#methods" title="Permalink to this heading"></a></h2>
+<p>The Mach cone is fascinating and sparks interest in people in many ways.
+Since the goal is to determine the general characteristics of the
+trajectory of a bolide based on the arrival times of the shock wave
+associated with the Mach cone, as recorded by seismic stations, it is
+necessary to understand the basics of arrival times
+<span id="id25">[]</span>. Arrival times can be expressed as a
+summation of:</p>
+<div class="math notranslate nohighlight">
+\[t = t_0 - t_1 + t_2
+\label{eq:time_calculation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(t_0\)</span> is the time when the bolide virtually impacts the
+surface, and <span class="math notranslate nohighlight">\(t_1\)</span> is the time it takes for the bolide to travel
+from the point where the shock wave was generated to the impact point
+and <span class="math notranslate nohighlight">\(t_2\)</span> is the last part. In fact, those previous considerations
+represent the wavefront that can be expressed at the speed of the bolide
+<span class="math notranslate nohighlight">\(v\)</span> and at the speed of sound <span class="math notranslate nohighlight">\(c\)</span>, that actually represent
+<span class="math notranslate nohighlight">\(t_0\)</span> and <span class="math notranslate nohighlight">\(t_1\)</span> respectively. It is important to note that
+this representation differs from travel times in seismology where
+arrival times are measured from the origin time of the earthquake
+(hypocenter), not from the epicenter. In the case of a bolide’s travel
+times, they are measured similarly to measuring times from the
+epicenter.</p>
+<p>In order to have travel times starting at the surface, <span class="math notranslate nohighlight">\(t_1\)</span> needs
+to be adjusted and it is the reason why is negative in equation
+<a class="reference external" href="#eq:time_calculation">[eq:time_calculation]</a>, as it represents the
+time from the origin to the first impact. An interesting feature arises
+when the bolide directly impacts the seismic station (<span class="math notranslate nohighlight">\(t_2 = 0\)</span>).
+If we use the impact time as the reference (<span class="math notranslate nohighlight">\(t_0 = 0\)</span>), the total
+time <span class="math notranslate nohighlight">\(t\)</span> becomes negative (<span class="math notranslate nohighlight">\(t = -t_1\)</span>). This is a special
+case where equation <a class="reference external" href="#eq:time_calculation">[eq:time_calculation]</a> has
+no solution. These details will become clearer in the following
+subsections as we develop the components that form equation
+<a class="reference external" href="#eq:time_calculation">[eq:time_calculation]</a>.</p>
+<p>Although there are multiple approaches to determine arrival times, they
+all lead to mathematically equivalent expressions. We will present these
+in a simple way in the following subsection. To visualize the geometry
+of the problem, we refer to the representations shown in Figure
+<a class="reference external" href="#fig:cono_osiris">2</a> and Figure <a class="reference external" href="#fig:geometría">[fig:geometría]</a>
+<span id="id26">[]</span>.</p>
+<p>In Figure <a class="reference external" href="#fig:cono_osiris">2</a>, point <span class="math notranslate nohighlight">\(P\)</span> represents the
+impact location, which corresponds to the landing site of the object.
+Points <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(T\)</span> are key points along the object’s
+trajectory: <span class="math notranslate nohighlight">\(Q\)</span> is the vertex of the Mach cone only at the
+specific moment when the wave was generated, and <span class="math notranslate nohighlight">\(T\)</span> is the
+specific point where the wave was generated. We have used Pujol’s 2005
+description. PQT and S remain fixed once the trajectory and location of
+the station are defined. This means, for instance, that Q will only be
+at the vertex of the cone at the moment the wave is generated, but
+moments later, Q will fall inside the cone as the system progresses. The
+site <span class="math notranslate nohighlight">\(S\)</span> is the location of the station.</p>
+<p>The angles <span class="math notranslate nohighlight">\(\delta\)</span> and <span class="math notranslate nohighlight">\(\gamma\)</span> represent the incidence
+angle and the azimuth of the trajectory, respectively. The angle
+<span class="math notranslate nohighlight">\(\beta\)</span> (Figure <a class="reference external" href="#fig:cono_osiris">2</a>a) is a key feature of
+the Mach cone, defined as the angle between the object’s trajectory and
+the wavefront of the cone (Figure <a class="reference external" href="#fig:nagasawa">1</a>), from which we
+derive equation <a class="reference external" href="#eq:mach_angle">[eq:mach_angle]</a>
+<span id="id27">[<a class="reference internal" href="#id36" title="JW Maccoll. The conical shock wave formed by a cone moving at a high speed. Proceedings of the Royal Society of London. Series A-Mathematical and Physical Sciences, 159(898):459–472, 1937.">Mac37</a>]</span>.</p>
+<div class="math notranslate nohighlight">
+\[\sin \beta = \frac{c}{v} = \frac{1}{M}
+\label{eq:mach_angle}\]</div>
+<p>Where <span class="math notranslate nohighlight">\(v\)</span> is the velocity of the object and <span class="math notranslate nohighlight">\(c\)</span> is the speed
+of sound. In our case, both <span class="math notranslate nohighlight">\(v\)</span> and <span class="math notranslate nohighlight">\(c\)</span> remain constant. The
+reasoning behind this method is based on calculating a series of
+distances that are then converted into times.</p>
+</section>
+<section id="vector-projection-and-matrix-rotation">
+<h2>Vector projection and matrix rotation<a class="headerlink" href="#vector-projection-and-matrix-rotation" title="Permalink to this heading"></a></h2>
+<section id="vector-projection">
+<h3>Vector projection<a class="headerlink" href="#vector-projection" title="Permalink to this heading"></a></h3>
+<p>We start with a known time, the impact at point <span class="math notranslate nohighlight">\(P\)</span>, and then,
+drawing backward along its trajectory to earlier points. In figure
+<a class="reference external" href="#fig:geometría">[fig:geometría]</a> we represented graphically the
+distances that are necessary to create the travel time using the vector
+projection approach. The important distances are the geographical
+location of the station <span class="math notranslate nohighlight">\(S\)</span> and <span class="math notranslate nohighlight">\(P\)</span>. There is also very
+important point: <span class="math notranslate nohighlight">\(Q\)</span>, where there are some graphical and physical
+characteristics. In essence Q is the shortest distance from the line
+trajectory to the station. We also describe the point <span class="math notranslate nohighlight">\(W\)</span> where
+the wave starts to travel only at the sound speed. The travel time
+<span class="math notranslate nohighlight">\(tt\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[tt =  \left( -\frac{PQ}{v}  + \frac{WS}{c} \right)
+\label{eq:tt}\]</div>
+<p>and,</p>
+<div class="math notranslate nohighlight">
+\[t= t_0 + tt.
+\label{eq:t01}\]</div>
+<p>So,</p>
+<div class="math notranslate nohighlight">
+\[t = t_0 + \left( -\frac{PQ}{v}  + \frac{WS}{c} \right)
+\label{eq:arrival time 1}\]</div>
+<p>Using the mathematical relations of figure
+<a class="reference external" href="#fig:geometría">[fig:geometría]</a> and equation
+<a class="reference external" href="#eq:mach_angle">[eq:mach_angle]</a> we get:</p>
+<div class="math notranslate nohighlight">
+\[t = t_0 + \frac{1}{v} \left(- PQ + \frac{QS}{\tan\beta} \right)
+\label{eq:arrival time 1}\]</div>
+<p>We refer to <span id="id28">[]</span> for a detailed explanation
+on the derivation of equation
+<a class="reference external" href="#eq:arrivaltime1">[eq:arrival time 1]</a>. However, in a later
+subsection we used a simple relation that represents the relation of
+<span class="math notranslate nohighlight">\(-PQ + {QS}/{\tan\beta}\)</span>. This is the general expression for
+calculating the arrival time at station <span class="math notranslate nohighlight">\(S\)</span>.</p>
+<p>It turns that the algorithm to solve equation
+<a class="reference external" href="#eq:arrivaltime1">[eq:arrival time 1]</a> is easy. Just using the
+following equations:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{u} = (\cos \gamma \sin \delta, \sin \gamma \sin \delta, -\cos \delta)\]</div>
+<div class="math notranslate nohighlight">
+\[\mathbf{b} = (x_s - x_0, \, y_s - y_0, \, z_s - z_0)\]</div>
+<div class="flushleft docutils container">
+<div class="math notranslate nohighlight">
+\[PQ = |\mathbf{b}| \cdot \cos(\alpha) = |\mathbf{b} \cdot \mathbf{u}|\]</div>
+<div class="math notranslate nohighlight">
+\[QS = \sqrt{|\mathbf{b}|^2 - d_T^2}\]</div>
+<p>where <span class="math notranslate nohighlight">\(x_s\)</span>, <span class="math notranslate nohighlight">\(y_s\)</span>, <span class="math notranslate nohighlight">\(z_s\)</span> = coordinates of the
+station, <span class="math notranslate nohighlight">\(x_0\)</span>, <span class="math notranslate nohighlight">\(y_0\)</span>, <span class="math notranslate nohighlight">\(z_0\)</span> = coordinates of the
+virtual impact.</p>
+<p>Analyzing equation <a class="reference external" href="#eq:arrivaltime1">[eq:arrival time 1]</a>, it
+is also a sum and subtraction of times, but expressed as ratios of
+distance to velocity.</p>
+<div class="figure docutils container">
+<p><a class="reference internal" href="DIAGRAMASPUJOL3.PNG"><img alt="image" src="DIAGRAMASPUJOL3.PNG" style="width: 100.0%;" /></a></p>
+</div>
+<div class="figure docutils container">
+<p><a class="reference internal" href="_images/version3Dnueva.png"><img alt="image1" src="_images/version3Dnueva.png" style="width: 100.0%;" /></a></p>
+</div>
+<p>Also, figure <a class="reference external" href="#fig:geometría">[fig:geometría]</a> shows the
+isochrones, which result from the intersubsections of the Mach cone
+with the surface (Figures <a class="reference external" href="#fig:geometría">[fig:geometría]</a>c and
+<a class="reference external" href="#fig:geometría">[fig:geometría]</a>d).</p>
+<p>However, vector projection is not the only or definitive form; there
+is a much more general approach tha we will also consided through a
+series of geometric considerations, leads to the following expression
+<a href="#id29"><span class="problematic" id="id30">:raw-latex:`\cite{Ishihara_2004}`</span></a>:</p>
+<div class="math notranslate nohighlight">
+\[t = t_0 + \frac{1}{v} \left( -Z' + \frac{\sqrt{X'^2 + Y'^2}}{\tan\beta} \right)\]</div>
+<p>So, we will connect both approaches</p>
+<p class="rubric" id="graphical-representation-of-the-vector-projection-and-matrix-rotation">Graphical representation of the vector projection and
+matrix rotation</p>
+<p>The process mach cone construction of the shock wave propagation is
+represented in figure <a class="reference external" href="#fig:3dpujol">[fig:3dpujol]</a></p>
+<ul>
+<li><p><strong>Initiation of the Shock Wave:</strong> First, In Figure
+<a class="reference external" href="#fig:3dpujol">[fig:3dpujol]</a>a (Cone 1), the <em>shock wave</em> is
+generated at the origin. This wave propagates toward station
+<span class="math notranslate nohighlight">\(S\)</span>, and simultaneously, the Mach cone begins to form. The
+<em>normal</em> to the Mach cone indicates the shortest path between the
+cone and the station.</p></li>
+<li><p><strong>Vertex Impact on the Surface:</strong> When the vertex of the Mach cone
+reaches the surface (Figure <a class="reference external" href="#fig:3dpujol">[fig:3dpujol]</a>a
+,Cone 2), , the <em>shock wave</em> stops propagating underground.
+However, for explanatory purposes, the cone is still illustrated
+as advancing through the atmosphere, where it continues to expand.</p></li>
+<li><p><strong>Arrival of the Shock Wave at the Station:</strong> Finally, the <em>shock
+wave</em> reaches station <span class="math notranslate nohighlight">\(S\)</span> (Figure
+<a class="reference external" href="#fig:3dpujol">[fig:3dpujol]</a>a ,Cone 3).</p>
+<p>This process can be divided into two key travel distances:</p>
+<ul class="simple">
+<li><p><em>Initial travel distance (QP):</em> The path from the origin to the
+impact point <span class="math notranslate nohighlight">\(P\)</span>.</p></li>
+<li><p><em>Distance from the vertex Q to the station S: QS</em> The final
+segment of the propagation path.</p></li>
+</ul>
+</li>
+</ul>
+<p>These two distances are critical for calculating the total travel
+path of the <em>shock wave</em> through the system. The (<span class="math notranslate nohighlight">\(PS\)</span>) is the
+geographic distance that serves as the basis for these calculations.
+Second, the representation of distances using vector projection and
+matrix rotation can be summarized as:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P-Q:\)</span> Distance between the origin point <span class="math notranslate nohighlight">\(Q\)</span> and the
+impact point <span class="math notranslate nohighlight">\(P\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(Q-S:\)</span> Distance between the <span class="math notranslate nohighlight">\(Q\)</span> point and station
+<span class="math notranslate nohighlight">\(S\)</span>.2</p></li>
+</ul>
+<p>Both distances can be calculated using two main methods:</p>
+<ol class="arabic simple">
+<li><p><strong>Vector Projection Method:</strong> This method directly constructs the
+projections of the vertices of the triangle <span class="math notranslate nohighlight">\(P-Q-S\)</span> onto a
+coordinate system. As explained in the previuos subsection. It is
+a straightforward, geometric approach based on simple projections.</p></li>
+<li><p><strong>Matrix Rotation Method:</strong> This approach uses a rotation matrix
+to transform the <span class="math notranslate nohighlight">\(P-Q-S\)</span> from an initial frame of reference
+(cone vertical) to its final inclination. The rotation matrix acts
+on the coordinate data <span class="math notranslate nohighlight">\((X, Y, Z)\)</span>. The purpose of this
+method is to rotate the Mach cone and represent the data at its
+final inclination. This rotation provides a generalized way to
+project data in three-dimensional space.</p></li>
+</ol>
+<p>While the <strong>vector projection method</strong> builds the distances directly
+from the triangle vertices, the <strong>matrix rotation method</strong> transforms
+the data through geometric rotations, allowing for a more general
+representation of the <em>shock wave</em> path.</p>
+<p class="rubric" id="rotations">Rotations</p>
+<p>The method consists of transforming the trajectory (represented by
+<span class="math notranslate nohighlight">\(P-Q-S\)</span> in the previous method) into a more convenient
+coordinate system by rotating the global reference system
+<span class="math notranslate nohighlight">\(X', Y', Z'\)</span> <a href="#id31"><span class="problematic" id="id32">:raw-latex:`\cite{Ishihara_2004}`</span></a>. This is done
+using the incidence and azimuth angles of the trajectory, with a
+slight difference in how the azimuth angle is considered—using its
+complementary angle, <span class="math notranslate nohighlight">\(\theta\)</span> (Figure
+<a class="reference external" href="#fig:geometría">[fig:geometría]</a>). From this, we derive the
+individual rotation matrices around the <span class="math notranslate nohighlight">\(Z\)</span>-axis (azimuth) and
+<span class="math notranslate nohighlight">\(Y\)</span>-axis (incidence):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R_z =
+\begin{bmatrix}
+-\cos{\gamma} &amp; -\sin{\gamma} &amp; 0 \\
+\sin{\gamma} &amp; \cos{\gamma} &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}R_y =
+\begin{bmatrix}
+-\sin{\theta} &amp; 0 &amp; -\cos{\theta} \\
+0 &amp; 1 &amp; 0 \\
+-\cos{\theta} &amp; 0 &amp; \sin{\theta}
+\end{bmatrix}\end{split}\]</div>
+<p>It follows that we get the rotation matrix:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M_R =
+\begin{bmatrix}
+\cos(\gamma) \cdot \sin(\theta) &amp; \sin(\gamma) \cdot \sin(\theta) &amp; -\cos(\theta) \\
+-\sin(\gamma) &amp; \cos(\gamma) &amp; 0 \\
+\cos(\gamma) \cdot \cos(\theta) &amp; \sin(\gamma) \cdot \cos(\theta) &amp; \sin(\theta)
+\end{bmatrix}\end{split}\]</div>
+<p>Finally the trajectory is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+X' \\
+Y' \\
+Z'
+\end{bmatrix}
+=
+M_R \cdot \mathbf{b}_m\end{split}\]</div>
+<p>where:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{b}_m =
+\begin{bmatrix}
+x_s - x_0 \\
+y_s - y_0 \\
+z
+\end{bmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\theta = 90^\circ - \gamma\]</div>
+<p>This method is more general because it allows working with any
+reference system.</p>
+<div class="figure docutils container">
+<p><a class="reference internal" href="_images/CONOS.PNG"><img alt="image2" src="_images/CONOS.PNG" style="width: 80.0%;" /></a></p>
+</div>
+</div>
+</section>
+</section>
+<section id="examples-discussion-and-results">
+<h2>Examples, discussion and results<a class="headerlink" href="#examples-discussion-and-results" title="Permalink to this heading"></a></h2>
+<p>The reentry of the SRC (Sample Return Capsule) from the OSIRIS-REx
+mission represented an event of great interest to the scientific
+community, offering a unique opportunity to study a phenomenon analogous
+to the entry of a meteorite into the atmosphere. This reentry was one of
+the most extensively instrumented, thanks to a collaborative campaign
+involving researchers from various institutions who strategically
+deployed geophysical instruments to analyze the event.</p>
+<p>However, we are aware that seismic data will be released to the general
+scientific community in the near future, so only very limited data is
+available at the time of writing this article, limiting the practical
+application of the proposed methods. Despite this, the purpose of this
+work remains educational, aiming to incorporate the records into future
+analyses once they become available.</p>
+<p>At first glance, it may seem like a trivial exercise, resolved simply
+through angles and distances. However, after working with the equations,
+we find that the phenomenon is difficult to understand because the
+source is moving at a speed greater than the speed of sound, making it a
+challenge for individuals with seismological training (RO).</p>
+<p>In contrast, it is very encouraging that students can have their first
+encounter with seismology through the study of supersonic bolides by
+analyzing <span class="math notranslate nohighlight">\(N\)</span>-wave arrivals at seismic stations (MZ).</p>
+<div class="datres docutils container">
+<p>Here is the content of Data and Resources.</p>
+</div>
+</section>
+<section id="declaration-of-competing-interests">
+<h2>Declaration of Competing Interests<a class="headerlink" href="#declaration-of-competing-interests" title="Permalink to this heading"></a></h2>
+<p>The authors acknowledge that there are no conflicts of interest
+recorded. <a class="footnote-reference brackets" href="#id34" id="id33">1</a></p>
+<div class="ack docutils container">
+<p>We thank Dr. Jose Pujol for providing access to his original codes.
+We also thank CICESE, UALP, and CONACYT for their support.</p>
+</div>
+<dl class="footnote brackets">
+<dt class="label" id="id34"><span class="brackets"><a class="fn-backref" href="#id33">1</a></span></dt>
+<dd><p>The authors acknowledge that there are no conflicts of interest
+recorded.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this heading"></a></h1>
+<div class="docutils container" id="id35">
+<dl class="citation">
+<dt class="label" id="id52"><span class="brackets">20223</span></dt>
+<dd><p>2023. URL: <a class="reference external" href="http://dx.doi.org/10.2514/6.2023-3727.vid">http://dx.doi.org/10.2514/6.2023-3727.vid</a>, <a class="reference external" href="https://doi.org/10.2514/6.2023-3727.vid">doi:10.2514/6.2023-3727.vid</a>.</p>
+</dd>
+<dt class="label" id="id58"><span class="brackets"><a class="fn-backref" href="#id1">BPD+15</a></span></dt>
+<dd><p>O. I. Berngardt, N. P. Perevalova, A. A. Dobrynina, K. A. Kutelev, N. V. Shestakov, V. F. Bakhtiarov, O. A. Kusonsky, R. V. Zagretdinov, and G. A. Zherebtsov. Toward the azimuthal characteristics of ionospheric and seismic effects of “chelyabinsk” meteorite fall according to the data from coherent radar, gps, and seismic networks. <em>Journal of Geophysical Research: Space Physics</em>, 2015. URL: <a class="reference external" href="http://dx.doi.org/10.1002/2015ja021549">http://dx.doi.org/10.1002/2015ja021549</a>, <a class="reference external" href="https://doi.org/10.1002/2015ja021549">doi:10.1002/2015ja021549</a>.</p>
+</dd>
+<dt class="label" id="id54"><span class="brackets">BGDC24</span></dt>
+<dd><p><strong>missing publisher in Blom_2024</strong></p>
+</dd>
+<dt class="label" id="id37"><span class="brackets">BL02</span></dt>
+<dd><p>Rhett Butler and Cinna Lomnitz. Coupled seismoacoustic modes on the seafloor. <em>Geophysical Research Letters</em>, 29(10):57–1–57–4, 2002. URL: <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2002GL014722">https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2002GL014722</a>, <a class="reference external" href="https://arxiv.org/abs/https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2002GL014722">arXiv:https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2002GL014722</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1029/2002GL014722">doi:https://doi.org/10.1029/2002GL014722</a>.</p>
+</dd>
+<dt class="label" id="id60"><span class="brackets">dGHHW+08</span></dt>
+<dd><p>Catherine D. de Groot-Hedlin, Michael A. H. Hedlin, Kristoffer T. Walker, Douglas P. Drob, and Mark A. Zumberge. Evaluation of infrasound signals from the shuttle atlantis using a large seismic network. <em>The Journal of the Acoustical Society of America</em>, 124(3):1442–1451, 2008. URL: <a class="reference external" href="http://dx.doi.org/10.1121/1.2956475">http://dx.doi.org/10.1121/1.2956475</a>, <a class="reference external" href="https://doi.org/10.1121/1.2956475">doi:10.1121/1.2956475</a>.</p>
+</dd>
+<dt class="label" id="id49"><span class="brackets"><a class="fn-backref" href="#id6">DAuriaMMR06</a></span></dt>
+<dd><p>Luca D’Auria, Enrica Marotta, Marcello Martini, and Patrizia Ricciolino. Seismic and acoustic detection of a bolide airburst in the gulf of naples (southern italy). <em>Journal of Geophysical Research: Solid Earth</em>, 2006. URL: <a class="reference external" href="http://dx.doi.org/10.1029/2005jb004254">http://dx.doi.org/10.1029/2005jb004254</a>, <a class="reference external" href="https://doi.org/10.1029/2005jb004254">doi:10.1029/2005jb004254</a>.</p>
+</dd>
+<dt class="label" id="id57"><span class="brackets">EH04</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id6">2</a>)</span></dt>
+<dd><p>W. N. Edwards and A. R. Hildebrand. Supracenter: locating fireball terminal bursts in the atmosphere using seismic arrivals. <em>Meteoritics &amp;amp; Planetary Science</em>, 39(9):1449–1460, 2004. URL: <a class="reference external" href="http://dx.doi.org/10.1111/j.1945-5100.2004.tb00121.x">http://dx.doi.org/10.1111/j.1945-5100.2004.tb00121.x</a>, <a class="reference external" href="https://doi.org/10.1111/j.1945-5100.2004.tb00121.x">doi:10.1111/j.1945-5100.2004.tb00121.x</a>.</p>
+</dd>
+<dt class="label" id="id43"><span class="brackets">EEB08</span></dt>
+<dd><p>Wayne N. Edwards, David W. Eaton, and Peter G. Brown. Seismic observations of meteors: coupling theory and observations. <em>Reviews of Geophysics</em>, 46(4):, 2008. URL: <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2007RG000253">https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2007RG000253</a>, <a class="reference external" href="https://arxiv.org/abs/https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2007RG000253">arXiv:https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2007RG000253</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1029/2007RG000253">doi:https://doi.org/10.1029/2007RG000253</a>.</p>
+</dd>
+<dt class="label" id="id44"><span class="brackets">HDWdGrootHedlin10</span></dt>
+<dd><p>Michael A. H. Hedlin, Doug Drob, Kris Walker, and Catherine de Groot‐Hedlin. A study of acoustic propagation from a large bolide in the atmosphere with a dense seismic network. <em>Journal of Geophysical Research: Solid Earth</em>, 2010. URL: <a class="reference external" href="http://dx.doi.org/10.1029/2010jb007669">http://dx.doi.org/10.1029/2010jb007669</a>, <a class="reference external" href="https://doi.org/10.1029/2010jb007669">doi:10.1029/2010jb007669</a>.</p>
+</dd>
+<dt class="label" id="id55"><span class="brackets"><a class="fn-backref" href="#id1">HW13</a></span></dt>
+<dd><p>Michael A. H. Hedlin and Kristoffer T. Walker. A study of infrasonic anisotropy and multipathing in the atmosphere using seismic networks. <em>Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences</em>, 371(1984):20110542, 2013. URL: <a class="reference external" href="http://dx.doi.org/10.1098/rsta.2011.0542">http://dx.doi.org/10.1098/rsta.2011.0542</a>, <a class="reference external" href="https://doi.org/10.1098/rsta.2011.0542">doi:10.1098/rsta.2011.0542</a>.</p>
+</dd>
+<dt class="label" id="id56"><span class="brackets">HGC15</span></dt>
+<dd><p>Martin Henneton, Olaf Gainville, and François Coulouvrat. Numerical simulation of sonic boom from hypersonic meteoroids. <em>AIAA Journal</em>, 53(9):2560–2570, 2015. URL: <a class="reference external" href="http://dx.doi.org/10.2514/1.j053421">http://dx.doi.org/10.2514/1.j053421</a>, <a class="reference external" href="https://doi.org/10.2514/1.j053421">doi:10.2514/1.j053421</a>.</p>
+</dd>
+<dt class="label" id="id46"><span class="brackets"><a class="fn-backref" href="#id24">IFST04</a></span></dt>
+<dd><p>Yoshiaki Ishihara, Muneyoshi Furumoto, Shin’ichi Sakai, and Shin’ya Tsukada. The 2003 kanto large bolide’s trajectory determined from shockwaves recorded by a seismic network and images taken by a video camera. <em>Geophysical Research Letters</em>, 2004. URL: <a class="reference external" href="http://dx.doi.org/10.1029/2004gl020287">http://dx.doi.org/10.1029/2004gl020287</a>, <a class="reference external" href="https://doi.org/10.1029/2004gl020287">doi:10.1029/2004gl020287</a>.</p>
+</dd>
+<dt class="label" id="id59"><span class="brackets">ITS+14</span></dt>
+<dd><p>Yoshiaki Ishihara, Shin’ya Tsukada, Shin’ichi Sakai, Yoshihiro Hiramatsu, and Muneyoshi Furumoto. The 1998 miyako fireball’s trajectory determined from shock wave records of a dense seismic array. <em>Earth, Planets and Space</em>, 55(5):e9–e12, 2014. URL: <a class="reference external" href="http://dx.doi.org/10.1186/bf03351752">http://dx.doi.org/10.1186/bf03351752</a>, <a class="reference external" href="https://doi.org/10.1186/bf03351752">doi:10.1186/bf03351752</a>.</p>
+</dd>
+<dt class="label" id="id61"><span class="brackets"><a class="fn-backref" href="#id23">KBS13</a></span></dt>
+<dd><p>Pavel Kalenda, Jiří Borovička, and Pavel Spurný. The localization of fireball trajectories with the help of seismic networks. <em>Studia Geophysica et Geodaetica</em>, 58(1):84–99, 2013. URL: <a class="reference external" href="http://dx.doi.org/10.1007/s11200-012-0733-2">http://dx.doi.org/10.1007/s11200-012-0733-2</a>, <a class="reference external" href="https://doi.org/10.1007/s11200-012-0733-2">doi:10.1007/s11200-012-0733-2</a>.</p>
+</dd>
+<dt class="label" id="id39"><span class="brackets"><a class="fn-backref" href="#id22">KMS+92</a></span></dt>
+<dd><p>H. Kanamori, J. Mori, B. Sturtevant, D. L. Anderson, and T. Heaton. Seismic excitation by space shuttles. <em>Shock Waves</em>, 2(2):89–96, June 1992.</p>
+</dd>
+<dt class="label" id="id38"><span class="brackets"><a class="fn-backref" href="#id5">KPV+24</a></span></dt>
+<dd><p>T. Karafyllidis, M. Papaevripidou, K. Vakkou, Z. Zacharia, S. Sotiriou, A. Moshou, L. Cerri, G. Chouliaras, D. Tataru, and B. Cavas. Unveiling the potential of educational seismology on students\\\textquotesingle attitudes toward stem disciplines. In <em>EDULEARN24 Proceedings</em>, 16th International Conference on Education and New Learning Technologies, 6793–6799. IATED, 1-3 July, 2024 2024. URL: <a class="reference external" href="https://doi.org/10.21125/edulearn.2024.1614">https://doi.org/10.21125/edulearn.2024.1614</a>, <a class="reference external" href="https://doi.org/10.21125/edulearn.2024.1614">doi:10.21125/edulearn.2024.1614</a>.</p>
+</dd>
+<dt class="label" id="id45"><span class="brackets">Lan04</span></dt>
+<dd><p>Charles A. Langston. Seismic ground motions from a bolide shock wave. <em>Journal of Geophysical Research: Solid Earth</em>, 2004. URL: <a class="reference external" href="http://dx.doi.org/10.1029/2004jb003167">http://dx.doi.org/10.1029/2004jb003167</a>, <a class="reference external" href="https://doi.org/10.1029/2004jb003167">doi:10.1029/2004jb003167</a>.</p>
+</dd>
+<dt class="label" id="id36"><span class="brackets"><a class="fn-backref" href="#id27">Mac37</a></span></dt>
+<dd><p>JW Maccoll. The conical shock wave formed by a cone moving at a high speed. <em>Proceedings of the Royal Society of London. Series A-Mathematical and Physical Sciences</em>, 159(898):459–472, 1937.</p>
+</dd>
+<dt class="label" id="id41"><span class="brackets"><a class="fn-backref" href="#id11">Nag78</a></span></dt>
+<dd><p>K Nagasawa. An analysis of sonic boom from a great fireball on may 10, 1977, recorded on seismographs of volcano observations. <em>Bull. Earthq. Res. Inst. Univ. Tokyo</em>, 53:271–280, 1978.</p>
+</dd>
+<dt class="label" id="id47"><span class="brackets">OPS+23</span></dt>
+<dd><p>Marco Olivieri, Davide Piccinini, Gilberto Saccorotti, Dario Barghini, Daniele Gardiol, Nicola Alessandro Pino, Maurizio Ripepe, Giulio Betti, Giorgio Lacanna, and Lorenzo Arcidiaco. The optical, seismic, and infrasound signature of the march 5 2022, bolide over central italy. <em>Scientific Reports</em>, 2023. URL: <a class="reference external" href="http://dx.doi.org/10.1038/s41598-023-48396-8">http://dx.doi.org/10.1038/s41598-023-48396-8</a>, <a class="reference external" href="https://doi.org/10.1038/s41598-023-48396-8">doi:10.1038/s41598-023-48396-8</a>.</p>
+</dd>
+<dt class="label" id="id62"><span class="brackets">PN</span></dt>
+<dd><p><strong>missing year in Popova</strong></p>
+</dd>
+<dt class="label" id="id51"><span class="brackets"><a class="fn-backref" href="#id1">Qam95</a></span></dt>
+<dd><p>A. Qamar. Space shuttle and meteroid–tracking supersonic objects in the atmosphere with seismographs. <em>Seismological Research Letters</em>, 66(5):6–12, 1995. URL: <a class="reference external" href="http://dx.doi.org/10.1785/gssrl.66.5.6">http://dx.doi.org/10.1785/gssrl.66.5.6</a>, <a class="reference external" href="https://doi.org/10.1785/gssrl.66.5.6">doi:10.1785/gssrl.66.5.6</a>.</p>
+</dd>
+<dt class="label" id="id40"><span class="brackets"><a class="fn-backref" href="#id7">RPGB17</a></span></dt>
+<dd><p>Bernadette M. Randles, Irene V. Pasquetto, Milena S. Golshan, and Christine L. Borgman. Using the jupyter notebook as a tool for open science: an empirical study. In <em>2017 ACM/IEEE Joint Conference on Digital Libraries (JCDL)</em>, volume, 1–2. 2017. <a class="reference external" href="https://doi.org/10.1109/JCDL.2017.7991618">doi:10.1109/JCDL.2017.7991618</a>.</p>
+</dd>
+<dt class="label" id="id42"><span class="brackets"><a class="fn-backref" href="#id4">RAA+22</a></span></dt>
+<dd><p>A. T. Ringler, R. E. Anthony, R. C. Aster, C. J. Ammon, S. Arrowsmith, H. Benz, C. Ebeling, A. Frassetto, W.-Y. Kim, P. Koelemeijer, H. C. P. Lau, V. Lekić, J. P. Montagner, P. G. Richards, D. P. Schaff, M. Vallée, and W. Yeck. Achievements and prospects of global broadband seismographic networks after 30 years of continuous geophysical observations. <em>Reviews of Geophysics</em>, 60(3):e2021RG000749, 2022. e2021RG000749 2021RG000749. URL: <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021RG000749">https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021RG000749</a>, <a class="reference external" href="https://arxiv.org/abs/https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2021RG000749">arXiv:https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2021RG000749</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1029/2021RG000749">doi:https://doi.org/10.1029/2021RG000749</a>.</p>
+</dd>
+<dt class="label" id="id48"><span class="brackets"><a class="fn-backref" href="#id3">Sil24</a></span></dt>
+<dd><p>Elizabeth A. Silber. Perspectives and challenges in bolide infrasound processing and interpretation: a focused review with case studies. <em>Remote Sensing</em>, 16(19):3628, 2024. URL: <a class="reference external" href="http://dx.doi.org/10.3390/rs16193628">http://dx.doi.org/10.3390/rs16193628</a>, <a class="reference external" href="https://doi.org/10.3390/rs16193628">doi:10.3390/rs16193628</a>.</p>
+</dd>
+<dt class="label" id="id50"><span class="brackets">STW+17</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id6">2</a>)</span></dt>
+<dd><p>J. Stevanović, N. A. Teanby, J. Wookey, N. Selby, I. J. Daubar, J. Vaubaillon, and R. Garcia. Bolide airbursts as a seismic source for the 2018 mars insight mission. <em>Space Science Reviews</em>, 211(1–4):525–545, 2017. URL: <a class="reference external" href="http://dx.doi.org/10.1007/s11214-016-0327-3">http://dx.doi.org/10.1007/s11214-016-0327-3</a>, <a class="reference external" href="https://doi.org/10.1007/s11214-016-0327-3">doi:10.1007/s11214-016-0327-3</a>.</p>
+</dd>
+<dt class="label" id="id53"><span class="brackets">TTR16</span></dt>
+<dd><p>Mar Tapia and Josep M. Trigo-Rodríguez. <em>Natural Hazard Associated to Shock Waves of Meter-Sized Meteoroids</em>, pages 199–218. Springer International Publishing, 2016. URL: <a class="reference external" href="http://dx.doi.org/10.1007/978-3-319-46179-3_10">http://dx.doi.org/10.1007/978-3-319-46179-3_10</a>, <a class="reference external" href="https://doi.org/10.1007/978-3-319-46179-3_10">doi:10.1007/978-3-319-46179-3_10</a>.</p>
+</dd>
+</dl>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="chapter1.html" class="btn btn-neutral float-left" title="Mathematical Foundation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, R. Ortega.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

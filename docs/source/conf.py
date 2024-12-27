@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'sissrc'
-copyright = '2024, R. Ortega'
+copyright = '2025, R. Ortega'
 author = 'R. Ortega'
 
 # -- General configuration ---------------------------------------------------
@@ -15,7 +15,10 @@ author = 'R. Ortega'
 
 extensions = [
     'sphinx.ext.mathjax',  # Enable LaTeX math support
+    'sphinxcontrib.bibtex',
 ]
+
+bibtex_bibfiles = ['Citations.bib']
 
 templates_path = ['_templates']
 exclude_patterns = []

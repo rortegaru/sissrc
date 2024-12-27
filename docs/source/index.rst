@@ -11,6 +11,7 @@ Welcome to sissrc's documentation!
    :caption: Contents:
 
    chapter1
+   Methods2
 
 
 Indices and tables
