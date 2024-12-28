@@ -12,6 +12,7 @@ Welcome to sissrc's documentation!
 
    chapter1
    Methods2
+   Questions
 
 
 Indices and tables
