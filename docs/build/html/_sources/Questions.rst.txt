@@ -41,8 +41,7 @@ its derivation?
 Applications and Examples
 --------------------------
 
-11. Why is the study of supersonic bolides considered educational for
-students?
+11. Why is the study of supersonic bolides considered similar to earthquake location?
 
 12. Discuss one limitation of the proposed methods as stated in the
 paper.

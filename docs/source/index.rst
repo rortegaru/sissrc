@@ -13,6 +13,7 @@ Welcome to sissrc's documentation!
    chapter1
    Methods2
    Questions
+   python2
 
 
 Indices and tables
